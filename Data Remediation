@@ -30,7 +30,8 @@ detection:
          -'Forensics'
 Selection: Hashes UDM
             -  target.ip = '193.42.33.81'                        
-               '179.43.175.5' or target.file.md5 = '107c2e790ae6ccef1c521878a6a61868'           
+               '179.43.175.5' 
+            -  or target.file.md5 = '107c2e790ae6ccef1c521878a6a61868'           
             -  target.file.md5 = "107c2e790ae6ccef1c521878a6a61868" target.file.md5 = "e99f9382de93223afbbaef8ec64a250b"
             -  target.file.sha1 = "3550280d650b9b8a2faf99714f7cb77ad1811341" or target.file.sha1 = "53efc707fc2bdada75da35997839e7ead48f9900"
             -  target.file.sha256 = "062ba629c7b2b914b289c8da0573c179fe86f2cb1f70a31f9a1400d563c3042a" 
