@@ -39,7 +39,7 @@ Selection: Hashes UDM
             -'full-path-to-the-msp'
 
 ParentImage|endswith:
-              -startswith.msp.exe
+              -startswith\msp.exe
 Image|endswith:
             - 'startswith\powershell.exe'
 CommandLine|contains:
