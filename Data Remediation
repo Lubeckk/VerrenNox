@@ -21,9 +21,9 @@ tags:
 logsource: Binary Padding
     #service: 
            - Unicode A.i with Chronicle UDM on SOCprime
-        #Binary smbclient-security ldap_debug
-    category: 'process_access'
-    product: windows
+        #Binary smbclient-security ldap_debug 
+category: 'process_access'
+product: microsoft windows
 detection:  
          - windash
          -'Binary Analysis'          
