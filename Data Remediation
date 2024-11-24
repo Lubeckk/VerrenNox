@@ -1,0 +1,54 @@
+title: 'Data-enrichment'
+status:  'Process_Creation'
+description: 
+          -- For the 'Data Enrichment' focus is on the importances of endpoint Data from splicing which is usually pretaining to what this is as such when dealing with 
+            any of the Malware and grade of Obscurity whether it be Cloud API, Cloud or OS operating system. Moving forward         
+          -- Having the data Cycle through first and third party data should be cleaned up and refined removing any disparities also along with other False Positives. Alteryx 
+            was the best decision here. The detection report is from the second reference. Ive also Hashed through Cronicle 'UDM'here on SOCprime for this Rememdiation 
+            the hash values are added. UDM reads as so in the selection of this Repository.  
+author: Verren Nox
+references: 
+    -  https://www.alteryx.com/glossary/data-enrichment
+    -  https://isc.sans.edu/diary/rss/31236
+tags: 
+    -  attack.t1001 #Data Obfuscation
+    -  attack.t1583 #Acquire Infrastructure
+    -  attack.t1036 #Masquerading
+    -  attack.t1596 #Search Open Technical Databases
+    -  attack.t1027.001 #Obfuscated Files or Information
+logsource: Binary Padding
+    #service: 
+           - Unicode A.i with Chronicle UDM on SOCprime
+        #Binary smbclient-security ldap_debug
+    category: 'process_access'
+    product: windows
+detection:  
+         - windash
+         -'Binary Analysis'          
+         -'Forensics'
+Selection: Hashes UDM
+            -  target.ip = '193.42.33.81'                        
+               '179.43.175.5' or target.file.md5 = '107c2e790ae6ccef1c521878a6a61868'           
+            -  target.file.md5 = "107c2e790ae6ccef1c521878a6a61868" target.file.md5 = "e99f9382de93223afbbaef8ec64a250b"
+            -  target.file.sha1 = "3550280d650b9b8a2faf99714f7cb77ad1811341" or target.file.sha1 = "53efc707fc2bdada75da35997839e7ead48f9900"
+            -  target.file.sha256 = "062ba629c7b2b914b289c8da0573c179fe86f2cb1f70a31f9a1400d563c3042a" 
+               or target.file.sha256 = "306f0c79ad9ee76e996556f909306fda5704b456d670aa9daeb54760b4b5e4f6" or 
+               target.file.sha256 = "47b268c21591069bfe4099833ad66b8138a53ab2dcb866e040d466aee1f8624c"
+            -'full-path-to-the-msp'
+
+ParentImage|endswith:
+              -startswith.msp.exe
+Image|endswith:
+            - 'startswith\powershell.exe'
+CommandLine|contains:
+            - 'full-path-to-the-msp'
+            - 'invoke-webrequest'
+condition: Processing
+fields:    
+           - For the 'Data Enrichment' focus is on the importances of endpoint Data from splicing which is usually pretaining to what this is as such when dealing with
+             any of the Malware and grade of Obscurity whether it be Cloud API, Cloud or OS operating system. 
+falsepositives:
+    - Amid locations shown instead of where the Malware or need refining data in this case. 'Data Enrichment' is to 're-define' for data of the process creation of 
+      this repository.
+level: medium
+id: 7a9fe80f-167a-4f38-8b0d-b1fab7e03c62
