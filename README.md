@@ -10,7 +10,7 @@
 - 💞️ I’m looking to collaborate on discussing more binary
  in Metadata also in creating Metadata annotations. 
 
-- 📫 How to reach me my email is https://bsky.app/profile/ananox.bsky.social
+- 📫 How to reach me. Message me at https://bsky.app/profile/ananox.bsky.social
  
 - 😄 Pronouns: He/ Him/ Non -Pronouns: Dude
   
