@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @VerrenNox Engineer and Data Scientist
-  for SOCprime in Dtat threat. I will be list only two
+  for SOCprime in Data threat. I will be list only two
   types of repositories here. Patchwork and Remediation.
 
 - 👀 I’m interested in all the Metrics and Technology. 
