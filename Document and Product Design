@@ -9,6 +9,7 @@ description: Specifications are from the analyzation -Chaya_003
           Mainframe. Sometimes the REST API/REST Application inbetween is varible of this. Everything here is explained in detail 
           from the Development Board or DEV Board window for this as working inside the modules for and of the Mainframe.
 author: Verren Nox
+date: 2024/12/24 
 references:
     - https://www.trendmicro.com/en_us/research/22/a/cybersecurity-industrial-control-systems-ics-part-1.html
 tags:
