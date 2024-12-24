@@ -46,7 +46,7 @@ Image|endswith:
 CommandLine|contains:
             - 'full-path-to-the-msp'
             - 'invoke-webrequest'
-condition: Processing
+condition: Complete
 fields:    
            - For the 'Data Enrichment' focus is on the importances of endpoint Data from splicing which is usually pretaining to what this is as such when dealing with
              any of the Malware and grade of Obscurity whether it be Cloud API, Cloud or OS operating system. 
