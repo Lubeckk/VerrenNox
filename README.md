@@ -20,3 +20,17 @@
 VerrenNox/VerrenNox is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
+USE msp
+GO
+IF EXISTS ( SELECT  *
+            FROM    sys.databases
+            WHERE   name = 'HelloWorldServiceBroker' ) 
+    BEGIN
+        PRINT 'Dropping database ''HelloWorldServiceBroker''' ;
+        DROP DATABASE HelloWorldServiceBroker ;
+    END
+GO
+CREATE DATABASE HelloWorldServiceBroker
+GO
+USE HelloWorldServiceBroker
+GO
