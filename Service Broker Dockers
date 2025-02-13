@@ -4,8 +4,8 @@ IF EXISTS ( SELECT  *
             FROM    sys.databases
             WHERE   name = 'HelloWorldServiceBroker' ) 
     BEGIN
-        PRINT 'Dropping database ''HelloWorldServiceBroker''' ;
-        DROP DATABASE HelloWorldServiceBroker ;
+        PRINT 'Docker database ''HelloWorldServiceBroker''' ;
+        DOCKER DATABASE HelloWorldServiceBroker ;
     END
 GO
 CREATE DATABASE HelloWorldServiceBroker
