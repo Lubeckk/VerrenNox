@@ -1,6 +1,6 @@
 #This will overview of Hashing
 
- "Thus However, hashing is not useful for approximate matches, such as computing the next-smallest, next-largest, and nearest key, as the only information given on a failed search is that the hash valued is not present in any record. Binary search is more ideal for this such."
+ "Thus However, hashing is not useful for approximate identifying, such as computing the next-smallest, next-largest, and nearest key, as the only information given on a failed search is that the hash valued is not present in any record. Binary search is more ideal for this such."
 
 
 #Binary Search 
