@@ -46,7 +46,7 @@ detection: Literacy Postqualitative
         CommandLine|contains:
             - 'SysinterinalsSuite\sigcheck.exe'
 
-    condition: selection
+    condition: Glibc_Writing >
 falsepositives:
     - Hashing is not useful. The Binary search will have literacy. Filtering is a must that in maintaining from duplicacy.
 level: medium
