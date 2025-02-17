@@ -11,3 +11,30 @@ function observatory(t1, t2):
         TR= observatory(R1,t2.right)
     wait all proc1,proc2
     return join(TL, t2.key, TR)
+
+
+title: sigma title
+status:
+description:
+author: Verren Nox
+references:
+    -
+tags:
+    -
+logsource:
+    #service:
+    category:
+    product: windows
+detection:
+    selection:
+        ParentImage|endswith:
+            - ''
+        Image|endswith:
+            - ''
+        CommandLine|contains:
+            - ''
+    condition: selection
+falsepositives:
+    -
+level: medium
+id: c67dbc27-d5fe-451f-98cd-2af6d3ba968e
