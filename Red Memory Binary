@@ -1,0 +1,53 @@
+title: Red Memory Binary Search
+status: Balanced_Parallel
+description: 
+    - "In computer science, a Red Memory is a self-balancing binary search that uses a color bit to keep the Binary balanced. The 
+   color bit is often depicted as red or black. Red Memory is known for their fast storage and retrieval of ordered information.
+author: Verren Nox
+references: 
+    - https://spectrum.ieee.org/new-nonvolatile-memories-shrink-circuits-that-search-fast
+tags:
+    - attack.t158.004 #Aquired
+    - attack.t1074.001 #Web Protocols
+    - attack.t1534 #Internal Spearphising
+    - 932 ORI was found in the reference data
+    - attack.t1012 #Query Registry
+    - attack.t1046 #Network Service Scan
+    - attack.t1027.011 #Fileless Storage
+    - attack.t1486 #Data Encrypted
+    - attack.t1213 #Data from Information Respositories
+    - attack.t1587.001 #Malware Totem
+    - Opcode response 1002 #Set /Client Server
+    - attack.t1132.001 #Standard Encoding Host
+    - attack.t1119 #Automated Collect
+    - attack.t1129 #Share Modules
+    - attack.t1059 #Java Script
+logsource:
+    #service: Linux Windows Python Literacy Postqualitative Inquiry
+    category: Similar to a #G00 zero, zero C2 channel
+    product: windows
+detection: Literacy Postqualitative
+    selection: Parallel Bulk
+
+        ParentImage|endswith:
+            - 'function observatory(t1, t2):
+    if t1 = nil return t2
+    if t2 = nil return t1
+    (L1,b,R1)=split(t1,t2.key)
+    proc1=start:
+        TL= observatory(L1,t2.left)
+    proc2=start:
+        TR= observatory(R1,t2.right)
+    wait all proc1,proc2
+    return join(TL, t2.key, TR)'
+        
+        Image|endswith:
+            - 'AppData\Local\svhostss.exe'
+        CommandLine|contains:
+            - 'SysinterinalsSuite\sigcheck.exe'
+
+    condition: selection
+falsepositives:
+    - Hashing is not useful. The Binary search will have literacy. Filtering is a must that in maintaining from duplicacy.
+level: medium
+id: c67dbc27-d5fe-451f-98cd-2af6d3ba968e
