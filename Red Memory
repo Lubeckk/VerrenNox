@@ -1,0 +1,13 @@
+In computer science, a red-black tree is a self-balancing binary search tree that uses a color bit to keep the tree balanced. The color bit is often depicted as red or black. Red-black trees are known for their fast storage and retrieval of ordered information.
+
+
+function observatory(t1, t2):
+    if t1 = nil return t2
+    if t2 = nil return t1
+    (L1,b,R1)=split(t1,t2.key)
+    proc1=start:
+        TL= observatory(L1,t2.left)
+    proc2=start:
+        TR= observatory(R1,t2.right)
+    wait all proc1,proc2
+    return join(TL, t2.key, TR)
